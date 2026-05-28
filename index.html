@@ -70,15 +70,25 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 5px 14px 5px 10px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .nav-logo:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.22);
+    transform: translateY(-1px);
+  }
+  nav.scrolled .nav-logo {
+    box-shadow: 0 2px 12px rgba(26,92,64,0.1);
   }
   .nav-logo-img {
-    height: 52px;
+    height: 48px;
     width: auto;
     object-fit: contain;
     display: block;
-    transition: opacity 0.3s;
   }
-  .nav-logo-img:hover { opacity: 0.88; }
   .nav-links {
     display: flex;
     gap: 2rem;
@@ -424,6 +434,54 @@
     letter-spacing: 0.05em;
   }
 
+  /* ── ABOUT PILLARS & QUOTE ── */
+  .about-pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem 1.5rem;
+    margin: 1.8rem 0;
+  }
+  .about-pillar-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  .ap-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .about-quote {
+    border-left: 3px solid var(--gold);
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0;
+    background: rgba(201,147,58,0.06);
+    border-radius: 0 4px 4px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--text-dark);
+    line-height: 1.65;
+  }
+  .about-taglines {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 1.8rem;
+  }
+  .about-taglines span {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--green-mid);
+    text-transform: uppercase;
+  }
   /* ── NABHI FEATURE ── */
   #nabhi {
     background: var(--green);
@@ -1278,11 +1336,31 @@
   </div>
 
   <div class="about-text">
-    <span class="section-tag reveal">Our Story</span>
-    <h2 class="section-title reveal reveal-delay-1">Born in the <em>Himalayan<br>Foothills</em>, Brought to You</h2>
+    <span class="section-tag reveal">About Kalpaang Himalaya</span>
+    <h2 class="section-title reveal reveal-delay-1">More Than a Name —<br><em>A Vision from the<br>Himalayas</em></h2>
     <div class="divider reveal reveal-delay-1"></div>
-    <p class="section-body reveal reveal-delay-2">Kalpaang Himalaya was born from a simple truth — modern life has drifted far from nature's intelligence. Our founder, after years studying ancient healing traditions in the Himalayas, discovered how restoring the body's natural balance through Nabhi Therapy, Yoga, and Ayurveda can reverse decades of lifestyle disease.</p>
-    <p class="section-body reveal reveal-delay-2" style="margin-top:1rem;">We are not a quick-fix. We are a movement — helping thousands reclaim their health without dependency on medicines, through authentic Himalayan wisdom.</p>
+    <p class="section-body reveal reveal-delay-2">The word <strong style="color:var(--green);font-weight:500;">"Kalpaang"</strong> symbolizes a part of the divine cosmic intention — a connection between human consciousness and higher natural intelligence. Combined with the sacred essence of the <strong style="color:var(--green);font-weight:500;">Himalaya</strong> — the abode of silence, meditation, healing, and enlightenment — the name reflects a journey toward inner balance and holistic well-being.</p>
+    <p class="section-body reveal reveal-delay-2" style="margin-top:1.2rem;">We believe that true wellness is not created through fear, dependency, or temporary solutions — but through reconnecting with nature, consciousness, breath, energy, and the body's innate healing potential.</p>
+
+    <div class="about-pillars reveal reveal-delay-3">
+      <div class="about-pillar-item"><span class="ap-dot"></span>Conscious Living</div>
+      <div class="about-pillar-item"><span class="ap-dot"></span>Natural Wellness Practices</div>
+      <div class="about-pillar-item"><span class="ap-dot"></span>Breath &amp; Energy Awareness</div>
+      <div class="about-pillar-item"><span class="ap-dot"></span>Meditation &amp; Mindfulness</div>
+      <div class="about-pillar-item"><span class="ap-dot"></span>Holistic Healing Approaches</div>
+      <div class="about-pillar-item"><span class="ap-dot"></span>Ancient Wisdom + Modern Understanding</div>
+    </div>
+
+    <blockquote class="about-quote reveal reveal-delay-3">
+      "We envision a space where people rediscover peace, vitality, and spiritual clarity — away from stress, imbalance, and disconnection."
+    </blockquote>
+
+    <div class="about-taglines reveal reveal-delay-3">
+      <span>Reconnect with Nature.</span>
+      <span>Awaken Inner Energy.</span>
+      <span>Experience the Himalayan Essence Within.</span>
+    </div>
+
     <div class="about-stats reveal reveal-delay-3">
       <div class="stat-card">
         <div class="stat-number">5,000+</div>
@@ -1559,18 +1637,18 @@
     <div class="divider reveal reveal-delay-1"></div>
     <p class="section-body reveal reveal-delay-2">Book a free 30-minute consultation with our wellness experts. We'll understand your health concerns and recommend the perfect healing pathway for you.</p>
     <div class="contact-items reveal reveal-delay-3">
-      <a href="https://wa.me/919599557019" class="contact-item">
+      <a href="https://wa.me/91959955701999" class="contact-item">
         <div class="contact-icon wa">💬</div>
         <div class="contact-item-text">
           <strong>WhatsApp Us</strong>
-          <span>+91 9599557019 — Quick response</span>
+          <span>+91 99999 99999 — Quick response</span>
         </div>
       </a>
-      <a href="tel:+919599557019" class="contact-item">
+      <a href="tel:+91959955701999" class="contact-item">
         <div class="contact-icon ph">📞</div>
         <div class="contact-item-text">
           <strong>Call Us</strong>
-          <span>+91 9599557019 — Mon–Sat, 8am–8pm</span>
+          <span>+91 99999 99999 — Mon–Sat, 8am–8pm</span>
         </div>
       </a>
       <a href="mailto:heal@kalpaanghimalaya.com" class="contact-item">
@@ -1717,7 +1795,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Kalpaang Himalaya · A unit of MPMS Welfare Foundation. All rights reserved.</span>
+    <span>© 2025 Kalpaang Himalaya · A unit of MPMS Welfare Foundation. All rights reserved.</span>
     <div style="display:flex; gap:1.5rem; flex-wrap:wrap; justify-content:center;">
       <a href="#">Privacy</a>
       <a href="#">Terms</a>
@@ -1727,7 +1805,7 @@
 </footer>
 
 <!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/919599557019" class="float-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+<a href="https://wa.me/91959955701999" class="float-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 
 <script>
   // Navbar scroll effect
